@@ -1,0 +1,86 @@
+[Version]
+Signature=$CHICAGO$
+Class=ELCO
+ClassGuid={826EE5CF-48AF-41ef-8ECC-69DAB06658F7}
+DriverVer=06/22/2002, 0.99.0002.0
+Provider=%MFGNAME%
+
+[Manufacturer]
+%MFGNAME%=DeviceList
+
+[DestinationDirs]
+DefaultDestDir=10,System32\Drivers
+
+[SourceDisksFiles]
+atk16u.sys=1
+generic.sys=2
+
+
+[SourceDisksNames]
+1=%INSTDISK%,,,objchk\i386
+2=%INSTDISK%,,,generic
+
+[DeviceList]
+%DESCRIPTION%=DriverInstall,USB\VID_E380&PID_1016
+
+;================= Class section =====================
+
+[ClassInstall32]
+Addreg=ClassReg
+
+[ClassReg]
+HKR,,,0,%ClassName%
+HKR,,Icon,,-5
+
+;------------------------------------------------------------------------------
+;  Windows 2000 Sections
+;------------------------------------------------------------------------------
+
+[DriverInstall.NT]
+CopyFiles=DriverCopyFiles
+
+[DriverCopyFiles]
+atk16u.sys,,,2
+generic.sys,,,2
+
+[DriverInstall.NT.Services]
+AddService=ATK16U,2,DriverService
+
+[DriverService]
+ServiceType=1
+StartType=3
+ErrorControl=1
+ServiceBinary=%10%\system32\drivers\atk16u.sys
+
+[DriverInstall.nt.hw]
+AddReg=DriverHwAddReg
+
+[DriverHwAddReg]
+HKR,,FriendlyName,,%FRIENDLYNAME%
+
+;------------------------------------------------------------------------------
+;  Windows 98 Sections
+;------------------------------------------------------------------------------
+
+[DriverInstall]
+AddReg=DriverAddReg
+CopyFiles=DriverCopyFiles
+
+[DriverAddReg]
+HKR,,DevLoader,,*ntkern
+HKR,,NTMPDriver,,atk16u.sys
+
+[DriverInstall.HW]
+AddReg=DriverHwAddReg
+
+;------------------------------------------------------------------------------
+;  String Definitions
+;------------------------------------------------------------------------------
+
+[Strings]
+MFGNAME="ELCO"
+INSTDISK="ELCO Installation Disc"
+DESCRIPTION="Telegraph Adapter ATK-16 USB"
+FRIENDLYNAME="Telegraph Adapter ATK-16 USB"
+ClassName = "ELCO"
+

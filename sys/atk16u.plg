@@ -1,0 +1,64 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: atk16u - Win32 Free--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating command line "rc.exe /l 0x422 /fo"objfre\i386/driver.res" /d "NDEBUG" "D:\PROJECTS\WDM\Telegraph Kernel\Atk16Usb\sys\driver.rc"" 
+Creating temporary file "C:\DOCUME~1\Slava\LOCALS~1\Temp\RSP231.tmp" with contents
+[
+/nologo /Gz /ML /W3 /O2 /I "C:\WINDDK\2195\inc" /I "C:\WINDDK\2195\inc\ddk" /I "C:\WINDDK\2195\inc\ddk\wdm" /I "C:\WDMBOOK\generic" /FI"C:\WINDDK\2195\inc\warning.h" /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /D "_MBCS" /D _X86_=1 /D i386=1 /D "STD_CALL" /D CONDITION_HANDLING=1 /D NT_UP=1 /D NT_INST=0 /D WIN32=100 /D _NT1X_=100 /D WINNT=1 /D _WIN32_WINNT=0x0500 /D _WIN32_IE=0x0400 /D WIN32_LEAN_AND_MEAN=1 /D DEVL=1 /D FPO=0 /D _DLL=1 /D "DRIVER" /D "_IDWBUILD" /D DBG=0 /FR"objfre\i386/" /Fp"objfre\i386/atk16u.pch" /Yu"stddcls.h" /Fo"objfre\i386/" /Fd"objfre\i386/" /FD /Zel -cbstring /QIfdiv- /QI0f /GF /Oxs /c 
+"D:\PROJECTS\WDM\Telegraph Kernel\Atk16Usb\sys\Control.cpp"
+"D:\PROJECTS\WDM\Telegraph Kernel\Atk16Usb\sys\DriverEntry.cpp"
+"D:\PROJECTS\WDM\Telegraph Kernel\Atk16Usb\sys\ReadWrite.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\Slava\LOCALS~1\Temp\RSP231.tmp" 
+Creating temporary file "C:\DOCUME~1\Slava\LOCALS~1\Temp\RSP232.tmp" with contents
+[
+/nologo /Gz /ML /W3 /O2 /I "C:\WINDDK\2195\inc" /I "C:\WINDDK\2195\inc\ddk" /I "C:\WINDDK\2195\inc\ddk\wdm" /I "C:\WDMBOOK\generic" /FI"C:\WINDDK\2195\inc\warning.h" /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /D "_MBCS" /D _X86_=1 /D i386=1 /D "STD_CALL" /D CONDITION_HANDLING=1 /D NT_UP=1 /D NT_INST=0 /D WIN32=100 /D _NT1X_=100 /D WINNT=1 /D _WIN32_WINNT=0x0500 /D _WIN32_IE=0x0400 /D WIN32_LEAN_AND_MEAN=1 /D DEVL=1 /D FPO=0 /D _DLL=1 /D "DRIVER" /D "_IDWBUILD" /D DBG=0 /FR"objfre\i386/" /Fp"objfre\i386/atk16u.pch" /Yc"stddcls.h" /Fo"objfre\i386/" /Fd"objfre\i386/" /FD /Zel -cbstring /QIfdiv- /QI0f /GF /Oxs /c 
+"D:\PROJECTS\WDM\Telegraph Kernel\Atk16Usb\sys\stddcls.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\Slava\LOCALS~1\Temp\RSP232.tmp" 
+Creating temporary file "C:\DOCUME~1\Slava\LOCALS~1\Temp\RSP233.tmp" with contents
+[
+wdm.lib usbd.lib generic.lib /nologo /base:"0x10000" /version:4.0 /entry:"DriverEntry@8" /subsystem:windows /pdb:none /machine:I386 /nodefaultlib /out:"objfre\i386\atk16u.sys" /libpath:"C:\WINDDK\2195\libfre\i386" /libpath:"C:\WDMBOOK\generic\objfre\i386" -MERGE:_PAGE=PAGE -MERGE:_TEXT=.text -MERGE:.rdata=.text -SECTION:INIT,d -OPT:REF -FORCE:MULTIPLE -RELEASE -FULLBUILD -IGNORE:4001,4037,4039,4065,4070,4078,4087,4089,4096 -osversion:4.00 -optidata -driver -align:0x20 -subsystem:native,4.00 -debug:notmapped,minimal 
+".\objfre\i386\Control.obj"
+".\objfre\i386\DriverEntry.obj"
+".\objfre\i386\ReadWrite.obj"
+".\objfre\i386\stddcls.obj"
+".\objfre\i386\driver.res"
+]
+Creating command line "link.exe @C:\DOCUME~1\Slava\LOCALS~1\Temp\RSP233.tmp"
+Creating temporary file "C:\DOCUME~1\Slava\LOCALS~1\Temp\RSP234.bat" with contents
+[
+@echo off
+C:\WDMBOOK\nmsym -translate:source,package,always .\objfre\i386\atk16u.sys
+copy .\objfre\i386\atk16u.sys C:\WINNT\system32\drivers
+]
+Creating command line "C:\DOCUME~1\Slava\LOCALS~1\Temp\RSP234.bat"
+Compiling resources...
+Compiling...
+stddcls.cpp
+Compiling...
+Control.cpp
+DriverEntry.cpp
+ReadWrite.cpp
+Generating Code...
+Linking...
+<h3>Output Window</h3>
+Finishing up...
+When you installed the WDM Book samples, you indicated that
+Soft-Ice/W was not present on your computer. No symbol file
+has been generated. If you want to generate symbol files
+in the future, change the SIWPATH environment variable to
+point to the Soft-Ice/W base directory.
+
+
+
+<h3>Results</h3>
+atk16u.sys - 0 error(s), 0 warning(s)
+</pre>
+</body>
+</html>
